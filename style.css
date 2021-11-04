@@ -1,151 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
-h1{
+* {
+  font-family: "Staatliches", cursive;
+  margin: 0;
+}
+
+h1 {
   padding-left: 5rem;
-  color: #B27569;
-  font-family: 'Staatliches', cursive;
- }
- 
- span{
-   color: aliceblue;
-   font-weight: bold;
- }
+  color: #b27569;
+}
+
+h2 {
+  padding-left: 10rem;
+  position: relative;
+  top: 22px;
+}
+
+p {
+  padding-left: 10rem;
+  font-family: monospace;
+  padding-top: 1.5rem;
+}
+
+span {
+  color: aliceblue;
+  font-weight: bold;
+}
+
+input {
+  width: 65px;
+}
 
 .container {
   padding-left: 10rem;
-  padding-top: 5rem;
+  padding-top: 6rem;
   align-items: center;
   width: 90%;
 }
 
+.goalTime {
+  padding-left: 10rem;
+}
+
 .track-outer {
+  position: relative;
+  text-align: right;
+}
+
+/*Pista*/
+.track {
+  border: 25px solid #b27569;
+  transition: all ease-in-out 200ms;
+  position: absolute;
+}
+.track:hover {
+  border: 25px solid #825046;
+  cursor: pointer;
+}
+
+  .track-lane100 {
+    left: -700px;
+    top: -218px;
     position: relative;
-    text-align: right;
-  }
+    z-index: 1;
+}
 
-  
-  .track { border: 25px solid #B27569; transition: all ease-in-out 200ms; position: absolute;}
-  .track:hover {border: 25px solid #825046; cursor:pointer}
- 
+  .track-lane200 {
+    left: -1066px;
+    top: -178px;
+    position: relative;
+    z-index: 1;
+}
 
-  /*  position changes by 11px every track, size changes by 22, border-rad by 10 */
-  
- 
-  /* .track1 {
-    height: 112px;
-    width: 362px;
-    border-radius:60px;
-    left:44px;
-    top:44px;
-  }
+.track-lane300 {
+  left: -1066px;
+  top: 246px;
+  position: relative;
+  z-index: 1;
+}
 
-  .track-lane1{
-    left:44px;
-    top:44px;
-  }
-  
-  .track2 {
-    height: 134px;
-    width: 384px;
-    border-radius:70px;
-    left:33px;
-    top:33px;
-  }
-  
-  .track3 {
-    height: 156px;
-    width: 406px;
-    border-radius:80px;
-    left:22px;
-    top:22px;
-  }
-  
-  .track4 {
-    height: 178px;
-    width: 428px;
-    border-radius:90px;
-    left:11px;
-    top:11px;
-  }
+.track-lane400 {
+  left: -700px;
+  top: 286px;
+  position: relative;
+  z-index: 1;
+}
 
-  .track5 {
-    height: 200px;
-    width: 450px;
-    border-radius:100px;
-    left:0;
-    top:0;
-  } */
+.track1 {
+  background-color: rgb(25, 211, 25);
+  height: 112px;
+  width: 362px;
+  border-radius: 53px;
+  left: 44px;
+  top: 44px;
+}
 
-  .track1 {
-    height: 112px;
-    width: 362px;
-    border-radius:53px;
-    left:44px;
-    top:44px;
-  }
+.track-lane1 {
+  left: -26px;
+  top: 116px;
+  position: relative;
+}
 
-    .track-lane1{
-      left: -24px;
-      top: 116px;
-      position: relative;
-    }
-  
-  .track2 {
-    height: 164px;
-    width: 414px;
-    border-radius:78px;
-    left:18px;
-    top:18px;
-  }
+.track2 {
+  height: 164px;
+  width: 414px;
+  border-radius: 78px;
+  left: 18px;
+  top: 18px;
+}
 
-    .track-lane2{
-      left: -50px;
-      top: 168px;
-      position: relative;
-      z-index: 1;
-    }
-  
-  .track3 {
-    height: 216px;
-    width: 466px;
-    border-radius:102px;
-    left:-8px;
-    top:-8px;
-  }
+.track-lane2 {
+  left: -50px;
+  top: 168px;
+  position: relative;
+  z-index: 1;
+}
 
-    .track-lane3{
-      left: -76px;
-      top: 220px;
-      position: relative;
-      z-index: 1;
-    }
-  
-  .track4 {
-    height: 268px;
-    width: 518px;
-    border-radius:127px;
-    left:-34px;
-    top:-34px;
-  }
+.track3 {
+  height: 216px;
+  width: 466px;
+  border-radius: 102px;
+  left: -8px;
+  top: -8px;
+}
 
-    .track-lane4{
-      left: -103px;
-      top: 272px;
-      position: relative;
-      z-index: 1;
-    }
+.track-lane3 {
+  left: -76px;
+  top: 220px;
+  position: relative;
+  z-index: 1;
+}
 
-  .track5 {
-    height: 320px;
-    width: 570px;
-    border-radius:152px;
-    left:-60px;
-    top:-60px;
-  } 
+.track4 {
+  height: 268px;
+  width: 518px;
+  border-radius: 127px;
+  left: -34px;
+  top: -34px;
+}
 
-    .track-lane5{
-      left: -129px;
-      top: 323px;
-      position: relative;
-      z-index: 1;
-    }
+.track-lane4 {
+  left: -103px;
+  top: 272px;
+  position: relative;
+  z-index: 1;
+}
+
+.track5 {
+  height: 320px;
+  width: 570px;
+  border-radius: 152px;
+  left: -60px;
+  top: -60px;
+}
+
+.track-lane5 {
+  left: -129px;
+  top: 323px;
+  position: relative;
+  z-index: 1;
+}
