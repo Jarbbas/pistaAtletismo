@@ -9,19 +9,41 @@
   </head>
   <body>
     <h1>Pista de Atletismo</h1>
-    <h2>Objectivo</h2>
-    <p>Facilitar através de uma visualização rápida <br>quantos segundos/100m, tens para percurrer uma volta de 400m dentro do teu GOAL TIME</p>
-    <p><b>Goal Time</b></p>
+    <h2>400m e 800m</h2>
+    <p>Controla as tuas voltas na pista, quantos segundos/100m, tens para percurrer uma volta de 400m dentro do teu tempo?</p>
+    <p><b>Tempo</b></p>
     <div class="goalTime">
       <input id=minutes oninput="display()" name=minutes type=number min="0" max="60" placeholder="minutos"> : 
       <input id=seconds oninput="display()" name=seconds type=number min="0" max="60" placeholder="segundos">
    </div>
-   <p>Precias de correr </p>
-   <p id="100"></p>
-   <p id="200" style="padding-top:0;"></p>
-   <p id="300" style="padding-top:0;"></p>
-   <p id="400" style="padding-top:0;"></p>
-    <div class="container">
+   <br> 
+   <div class="container">
+  <table>
+    <th><td colspan="4">Distancias em metros</td></th>
+    <tr>
+      <td>Provas</td>
+      <td>100</td>
+      <td>200</td>
+      <td>300</td>
+      <td>400</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td id="100"></td>
+      <td id="200"></td>
+      <td id="300"></td>
+      <td id="400"></td>
+    </tr>
+    <tr>
+      <td>800</td>
+      <td id="500"></td>
+      <td id="600"></td>
+      <td id="700"></td>
+      <td id="800"></td>
+    </tr>
+  </table>
+   </div>
+    <div class="trackContainer">
       <div class="track-outer">
         <div class="track track5"><span class="track-lane5">5</span></div>
         <p id="400lap" class="track-lane400">0/400m</p>

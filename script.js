@@ -24,14 +24,24 @@ function display() {
     var result200m = ((seconds / 4)*2);
     var result300m = ((seconds / 4)*3);
     var result400m = ((seconds / 4)*4);
+    var result500m = ((seconds / 4)*5);
+    var result600m = ((seconds / 4)*6);
+    var result700m = ((seconds / 4)*7);
+    var result800m = ((seconds / 4)*8);
     
-    document.getElementById("100").innerHTML = "<b>" + convertTime(result100m) + "</b> aos 100m";
+    /** variaveis para pista */
     document.getElementById("100lap").innerHTML =  convertTime(result100m);
-    document.getElementById("200").innerHTML = "<b>" + convertTime(result200m) + "</b> aos 200m";
     document.getElementById("200lap").innerHTML =  convertTime(result200m);
-    document.getElementById("300").innerHTML = "<b>" + convertTime(result300m) + "</b> aos 300m";
     document.getElementById("300lap").innerHTML =  convertTime(result300m);
-    document.getElementById("400").innerHTML = "<b>" + convertTime(result400m) + "</b> aos 400m";
-    document.getElementById("400lap").innerHTML = convertTime(result400m); 
+    document.getElementById("400lap").innerHTML = convertTime(result400m);
+    /** variaveis para a tabela*/ 
+    document.getElementById("100").innerHTML = "<b>" + convertTime(result100m);
+    document.getElementById("200").innerHTML = "<b>" + convertTime(result200m);
+    document.getElementById("300").innerHTML = "<b>" + convertTime(result300m);
+    document.getElementById("400").innerHTML = "<b>" + convertTime(result400m);
+    document.getElementById("500").innerHTML = "<b>" + convertTime(result500m);
+    document.getElementById("600").innerHTML = "<b>" + convertTime(result600m);
+    document.getElementById("700").innerHTML = "<b>" + convertTime(result700m);
+    document.getElementById("800").innerHTML = "<b>" + convertTime(result800m);
 
  }

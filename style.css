@@ -11,13 +11,13 @@ h1 {
 }
 
 h2 {
-  padding-left: 10rem;
+  padding-left: 5rem;
   position: relative;
   top: 22px;
 }
 
 p {
-  padding-left: 10rem;
+  padding-left: 5rem;
   font-family: monospace;
   padding-top: 1.5rem;
 }
@@ -31,7 +31,23 @@ input {
   width: 65px;
 }
 
+
+table, th, td {
+  border: 1px solid orange;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 5px 30px 5px ;
+}
+
+tr:nth-child(even) {background-color: #eece88;}
+
 .container {
+  padding-left: 10rem;
+  align-items: center;
+  width: 90%;
+}
+
+.trackContainer {
   padding-left: 10rem;
   padding-top: 6rem;
   align-items: center;
@@ -39,7 +55,8 @@ input {
 }
 
 .goalTime {
-  padding-left: 10rem;
+  padding-top: 0.5rem;
+  padding-left: 5rem;
 }
 
 .track-outer {
