@@ -13,21 +13,27 @@
     <p>Facilitar através de uma visualização rápida <br>quantos segundos/100m, tens para percurrer uma volta de 400m dentro do teu GOAL TIME</p>
     <p><b>Goal Time</b></p>
     <div class="goalTime">
-      <input id=minutes name=minutes type=number min="0" max="60" placeholder="minutos"> : 
-      <input id=seconds name=seconds type=number min="0" max="60" placeholder="segundos">
+      <input id=minutes oninput="display()" name=minutes type=number min="0" max="60" placeholder="minutos"> : 
+      <input id=seconds oninput="display()" name=seconds type=number min="0" max="60" placeholder="segundos">
    </div>
+   <p>Precias de correr </p>
+   <p id="100"></p>
+   <p id="200" style="padding-top:0;"></p>
+   <p id="300" style="padding-top:0;"></p>
+   <p id="400" style="padding-top:0;"></p>
     <div class="container">
       <div class="track-outer">
         <div class="track track5"><span class="track-lane5">5</span></div>
-        <p class="track-lane400">0/400m</p>
+        <p id="400lap" class="track-lane400">0/400m</p>
         <div class="track track4"><span class="track-lane4">4</span></div>
-        <p class="track-lane300">300m</p>
+        <p id="300lap" class="track-lane300">300m</p>
         <div class="track track3"><span class="track-lane3">3</span></div> 
-        <p class="track-lane200">200m</p>
+        <p id="200lap" class="track-lane200">200m</p>
         <div class="track track2"><span class="track-lane2">2</span></div>
-        <p class="track-lane100">100m</p>
+        <p id="100lap" class="track-lane100">100m</p>
         <div class="track track1"><span class="track-lane1">1</span></div>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

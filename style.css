@@ -58,29 +58,29 @@ input {
   cursor: pointer;
 }
 
-  .track-lane100 {
-    left: -700px;
-    top: -218px;
-    position: relative;
-    z-index: 1;
+.track-lane100 {
+  left: -58rem;
+  top: -218px;
+  position: relative;
+  z-index: 1;
 }
 
-  .track-lane200 {
-    left: -1066px;
-    top: -178px;
-    position: relative;
-    z-index: 1;
+.track-lane200 {
+  left: -81rem;
+  top: -178px;
+  position: relative;
+  z-index: 1;
 }
 
 .track-lane300 {
-  left: -1066px;
+  left: -81rem;
   top: 246px;
   position: relative;
   z-index: 1;
 }
 
 .track-lane400 {
-  left: -700px;
+  left: -58rem;
   top: 286px;
   position: relative;
   z-index: 1;
