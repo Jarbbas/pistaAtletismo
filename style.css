@@ -6,18 +6,41 @@
 }
 
 h1 {
-  padding-left: 5rem;
-  color: #b27569;
+  color: #FFF;
+  padding-left: 2rem;
+  background-color: #e6216b;
+  animation-duration: 3s;
+  animation-name: slideTitle;
+}
+
+@keyframes slideTitle {
+  50% {
+    opacity: 0.5;
+    background-color: #00b6f0;
+    color: white;
+    padding-left: 25rem;
+  }
+
+  100% {
+    opacity: 1;
+    background-color: #dd1936;
+    color: white;
+    padding-left: 2rem;
+  }
 }
 
 h2 {
-  padding-left: 5rem;
+  padding-left: 2rem;
   position: relative;
   top: 22px;
 }
 
+h3{
+  padding-left: 2rem;
+}
+
 p {
-  padding-left: 5rem;
+  padding-left: 2rem;
   font-family: monospace;
   padding-top: 1.5rem;
 }
@@ -31,32 +54,101 @@ input {
   width: 65px;
 }
 
-
-table, th, td {
+table,
+th,
+td {
+  width: auto;
   border: 1px solid orange;
   text-align: center;
   border-collapse: collapse;
-  padding: 5px 30px 5px ;
+  padding: 5px;
 }
 
-tr:nth-child(even) {background-color: #eece88;}
+tr:nth-child(even) {
+  background-color: #eece88;
+}
+
+.float-container {
+  border: 3px solid #fff;
+  width: 100%;
+}
+
+.float-child1 {
+  width: 39%;
+  float: left;
+ 
+}  
+.float-child2 {
+  width: 10%;
+  float: left;
+  padding-top: 4rem;
+  padding-left: 3rem;
+}  
+.float-child3 {
+  width: 22%;
+  float: left;
+}  
+
+.float-child4 {
+  width: 21%;
+  float: left;
+  padding-top: 3rem;
+  padding-left: 1rem;
+} 
+
+.float-child-img {
+    width: 100%;
+    height: auto;
+}  
+
+.profilePicCarla {  
+  width: 100%;
+  height: auto;
+  animation-duration: 1s;
+  animation-name: slidePhoto1;
+}
+
+  @keyframes slidePhoto1 {
+    100% {
+      opacity: 1.5;
+      padding-left: 28rem;
+    }
+  }
 
 .container {
-  padding-left: 10rem;
+  opacity: 0;
+  padding-left: 2rem;
   align-items: center;
-  width: 90%;
+  width: 100%;
+  padding-top: 1rem;
 }
 
 .trackContainer {
-  padding-left: 10rem;
+  opacity: 0;
+  padding-left: 5rem;
   padding-top: 6rem;
   align-items: center;
   width: 90%;
 }
 
-.goalTime {
-  padding-top: 0.5rem;
-  padding-left: 5rem;
+.fade {
+  opacity: 1;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.goalTime {   
+  padding-top: 1rem;
+  padding-left: 2rem;
 }
 
 .track-outer {
@@ -76,28 +168,28 @@ tr:nth-child(even) {background-color: #eece88;}
 }
 
 .track-lane100 {
-  left: -58rem;
+  left: -64%;
   top: -218px;
   position: relative;
   z-index: 1;
 }
 
 .track-lane200 {
-  left: -81rem;
+  left: -93%;
   top: -178px;
   position: relative;
   z-index: 1;
 }
 
 .track-lane300 {
-  left: -81rem;
+  left: -93%;
   top: 246px;
   position: relative;
   z-index: 1;
 }
 
 .track-lane400 {
-  left: -58rem;
+  left: -64%;
   top: 286px;
   position: relative;
   z-index: 1;
@@ -176,4 +268,85 @@ tr:nth-child(even) {background-color: #eece88;}
   top: 323px;
   position: relative;
   z-index: 1;
+}
+
+/***SLIDEER***/
+.slideShow {
+max-width: 100%;
+position: relative;
+margin: auto;
+padding-top: 1rem;
+}
+
+.mySlide {
+  display: none;
+}
+
+.mySlide img{
+  width: 100%;
+}
+
+.slideNumber {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 15px;
+}
+
+.slideDesc {
+  color: #f2f2f2;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+.nextBtn {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dotNav {
+  text-align: center;
+  user-select: none;
+}
+
+.dotBtn {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border-radius: 50%;
+  display: inline-block;
+  user-select: none;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
 }

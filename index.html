@@ -4,28 +4,98 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Complexo Municipal de Atletismo Carla Sacramento</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Pista de Atletismo</h1>
-    <h2>400m e 800m</h2>
-    <p>Controla as tuas voltas na pista, quantos segundos/100m, tens para percurrer uma volta de 400m dentro do teu tempo?</p>
-    <p><b>Tempo</b></p>
-    <div class="goalTime">
-      <input id=minutes oninput="display()" name=minutes type=number min="0" max="60" placeholder="minutos"> : 
-      <input id=seconds oninput="display()" name=seconds type=number min="0" max="60" placeholder="segundos">
-   </div>
-   <br> 
-   <div class="container">
-  <table>
-    <th><td colspan="4">Distancias em metros</td></th>
+    <h1>Complexo Municipal de Atletismo Carla Sacramento</h1>
+      <div class="float-child1">
+          <h2>Carla Sacramento</h2>
+          <br>
+          <p>A <b>Carla</b> Cristina Paquete do <b>Sacramento</b></Carla> é uma atleta portuguesa já retirada. <i>Meio-fundista</i>, especialista nos 1500 metros e foi <i>campeã do mundo</i> em 1997, bem como recebeu a <i>Olímpica Nobre Guedes</i> no mesmo ano.<br>
+             Conquistou várias medalhas em grandes competições internacionais e superou por mais de duas dezenas de vezes os recordes nacionais. <br>
+             Apesar de já não competir, os seus máximos nacionais dos 800, 1500 e 3000 metros ainda perduram. </p>
+      </div>
+      <div class="float-child2">
+        <img class="profilePicCarla" src="img/CarlaSacramento.jpeg" alt="">
+      </div>
+      <div class="float-child3">
+        <h2>Completo de Atletismo</h2>
+          <br>
+          <p>O complexo da modalidade de Atletismo, foi inaugurado em 2001 recebendo a Honra do nome da Atleta.</p>
+      </div>
+      <div class="float-child4">
+          <!-- Slideshow container -->
+        <div class="slideShow">
+  
+          <!-- Slides -->
+          <div class="mySlide fade">
+              <div class="slideNumber">1 / 4</div>
+              <img src="img/slide1.jpg" />
+              <!-- <div class="slideDesc">Slide 1</div> -->
+          </div>
+  
+          <div class="mySlide fade">
+              <div class="slideNumber">2 / 4</div>
+              <img src="img/slide2.jpg" />
+              <!-- <div class="slideDesc">Slide 2</div> -->
+          </div>
+  
+          <div class="mySlide fade">
+              <div class="slideNumber">3 / 4</div>
+              <img src="img/slide3.jpg" />    
+              <!-- <div class="slideDesc">Slide 3</div> -->
+          </div>
+  
+          <div class="mySlide fade">
+              <div class="slideNumber">4 / 4</div>
+              <img src="img/slide4.jpg" />  
+              <!-- <div class="slideDesc">Slide 4</div> -->
+          </div>
+  
+          <!-- Next & previsu btn -->
+          <a class="prevBtn" onclick="nextSlide(-1)">&#10094;</a>
+          <a class="nextBtn" onclick="nextSlide(1)">&#10095;</a>
+      </div>
+  
+      <!-- Dot nav -->
+      <div class="dotNav">
+          <span class="dotBtn" onclick="currentSlide(1)"></span>
+          <span class="dotBtn" onclick="currentSlide(2)"></span>
+          <span class="dotBtn" onclick="currentSlide(3)"></span>
+          <span class="dotBtn" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+  
+   <br>
+   <!-- <h2>Tempos em Pista</h2>  -->
+   <h3>Tempos de pista</h3>
+   <p>Introduz o tempo final que pretende fazer aofim da primeira volta volta (400m)</p>  
+   <div class="goalTime">
+    <input id=minutes oninput="display()" name=minutes type=number min="0" max="60" placeholder="minutos"> : 
+    <input id=seconds oninput="display()" name=seconds type=number min="0" max="60" placeholder="segundos">
+  </div>  
+   <div id="table" class="container">
+     
+  <table style="width: 95%;">
+    <tr style="background-color: orange; color:aliceblue"><td colspan="16">Distancias em metros</td></tr>
     <tr>
       <td>Provas</td>
       <td>100</td>
       <td>200</td>
       <td>300</td>
       <td>400</td>
+      <td>500</td>
+      <td>600</td>
+      <td>700</td>
+      <td>800</td>
+      <td>900</td>
+      <td>1000</td>
+      <td>1100</td>
+      <td>1200</td>
+      <td>1300</td>
+      <td>1400</td>
+      <td>1500</td>
     </tr>
     <tr>
       <td>400</td>
@@ -33,29 +103,37 @@
       <td id="200"></td>
       <td id="300"></td>
       <td id="400"></td>
-    </tr>
-    <tr>
-      <td>800</td>
       <td id="500"></td>
       <td id="600"></td>
       <td id="700"></td>
       <td id="800"></td>
+      <td id="900"></td>
+      <td id="1000"></td>
+      <td id="1100"></td>
+      <td id="1200"></td>
+      <td id="1300"></td>
+      <td id="1400"></td>
+      <td id="1500"></td>
     </tr>
   </table>
    </div>
-    <div class="trackContainer">
+
+   
+    <div id="track" class="trackContainer">
       <div class="track-outer">
-        <div class="track track5"><span class="track-lane5">5</span></div>
+        <div class="track track5" onmouseover="lane(5)"><span class="track-lane5">5</span></div>
         <p id="400lap" class="track-lane400">0/400m</p>
-        <div class="track track4"><span class="track-lane4">4</span></div>
+        <div class="track track4" onmouseover="lane(4)"><span class="track-lane4">4</span></div>
         <p id="300lap" class="track-lane300">300m</p>
-        <div class="track track3"><span class="track-lane3">3</span></div> 
+        <div class="track track3" onmouseover="lane(3)"><span class="track-lane3">3</span></div> 
         <p id="200lap" class="track-lane200">200m</p>
-        <div class="track track2"><span class="track-lane2">2</span></div>
+        <div class="track track2" onmouseover="lane(2)"><span class="track-lane2">2</span></div>
         <p id="100lap" class="track-lane100">100m</p>
-        <div class="track track1"><span class="track-lane1">1</span></div>
+        <div class="track track1" onmouseover="lane(1)"><span class="track-lane1">1</span></div>
       </div>
     </div>
+ 
+
   </body>
   <script src="script.js"></script>
 </html>
